@@ -1,0 +1,14 @@
+stages:
+    - build
+    - deploy
+
+build:
+    image: reactnativecommunity/react-native-android
+    stage: build
+    script:
+        - npm install
+        - cd android && chmod +x gradlew
+        - ./gradlew assembleRelease
+    artifacts:
+        paths:
+            - android/app/build/outputs/
