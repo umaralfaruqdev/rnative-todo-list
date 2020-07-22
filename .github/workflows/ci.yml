@@ -28,6 +28,10 @@ jobs:
         run: |
           cd android && ./gradlew assembleRelease
 
+      - name: List result
+        run: |
+         ls android/app/build/outputs/
+
       - name: uploading artifact
         uses: actions/upload-artifact@v2
         with:
