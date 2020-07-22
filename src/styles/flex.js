@@ -22,6 +22,9 @@ const utility = {
 	},
 	jcsa: {
 		justifyContent: 'space-around'
+	},
+	frow: {
+		flexDirection: 'row'
 	}
 }
 
