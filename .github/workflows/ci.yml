@@ -41,4 +41,4 @@ jobs:
           path: android/app/build/outputs/apk/release/app-release.apk
 
       - name: Listing
-        run: android/app/build/outputs/apk/release
+        run: ls android/app/build/outputs/apk/release
