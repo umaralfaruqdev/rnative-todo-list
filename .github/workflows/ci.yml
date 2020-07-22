@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: release-app
-          path: android/app/build/outputs/apk/app-release.apk
+          path: android/app/build/outputs/apk/release/app-release.apk
 
       - name: Listing result
         run: ls android/app/build/outputs/apk
@@ -38,7 +38,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: release-app
-          path: android/app/build/outputs/apk/app-release.apk
+          path: android/app/build/outputs/apk/release/app-release.apk
 
       - name: Listing
-        run: android/app/build/outputs/apk
+        run: android/app/build/outputs/apk/release
