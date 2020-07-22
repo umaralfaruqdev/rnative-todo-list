@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  preparation:
-    name: Preparation setting
+  build:
+    name: Build Android App
     runs-on: ubuntu-latest
 
     steps:
@@ -24,9 +24,9 @@ jobs:
       - name: Make permission
         run: sudo chmod +x android/gradlew
 
-      - name: Build to apk
-        run: |
-          cd android && ./gradlew assembleRelease
+        #- name: Build to apk
+        #run: |
+        #cd android && ./gradlew assembleRelease
 
       - name: List result
         run: |
