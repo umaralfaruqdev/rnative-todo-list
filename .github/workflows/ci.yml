@@ -12,30 +12,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Checking dependencies
-        run: |
-          git --version
-          node -v
-          npm -v
-          #- name: Installing dependencies
-          #run: |
-          #npm install
-
-      - name: Make permission
-        run: sudo chmod +x android/gradlew
-
-        #- name: Build to apk
-        #run: |
-        #cd android && ./gradlew assembleRelease
 
       - name: List result
         run: |
-          ls android/app/build/outputs/
+          ls android
 
-      - name: uploading artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: release-apk
-          path: android/app/build/outputs/apk/app-release.apk
+# - name: uploading artifact
+# uses: actions/upload-artifact@v2
+# with:
+# name: release-apk
+# path: android/app/build/outputs/apk/app-release.apk
 
 
