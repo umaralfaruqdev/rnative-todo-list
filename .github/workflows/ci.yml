@@ -13,6 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Building
+        run: |
+          sudo chmod +x android/gradlew
+          cd android && ./gradlew assembleRelease
+
       - name: List result
         run: |
           ls android/app
