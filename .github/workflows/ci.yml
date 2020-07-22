@@ -17,9 +17,9 @@ jobs:
           git --version
           node -v
           npm -v
-      - name: Installing dependencies
-        run: |
-          npm install
+          #- name: Installing dependencies
+          #run: |
+          #npm install
 
       - name: Make permission
         run: sudo chmod +x android/gradlew
@@ -30,7 +30,7 @@ jobs:
 
       - name: List result
         run: |
-          ls android/app/build/outputs/apk
+          ls android/app/build/outputs/
 
       - name: uploading artifact
         uses: actions/upload-artifact@v2
