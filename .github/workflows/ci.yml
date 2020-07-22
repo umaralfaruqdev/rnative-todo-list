@@ -30,7 +30,7 @@ jobs:
 
       - name: List result
         run: |
-         ls android/app/build/outputs/
+          ls android/app/build/outputs/apk
 
       - name: uploading artifact
         uses: actions/upload-artifact@v2
