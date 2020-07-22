@@ -53,7 +53,9 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/app-release.zip
+          file: dist/app-release.zip dist/app-release.zip android/app/build/outputs/apk/release/app-release.apk
           tag: v1
           overwrite: true
+          prerelease: true
           body: "The first release app build with React, This App developed by umar"
+
