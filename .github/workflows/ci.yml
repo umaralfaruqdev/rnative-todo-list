@@ -23,4 +23,4 @@ jobs:
 
       - name: List result
         run: |
-          ls android/app/build/apk
+          ls android/app/build/outputs/apk
