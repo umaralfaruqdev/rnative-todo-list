@@ -1,0 +1,19 @@
+name: CICD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  preparation:
+    name: Preparation setting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking dependencies
+        run: |
+          git --version
+          node -v
+          npm -v
+
