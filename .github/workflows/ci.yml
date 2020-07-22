@@ -21,6 +21,9 @@ jobs:
         run: |
           npm install
 
+      - name: Make permission
+        run: sudo chmod +x android/gradlew
+
       - name: Build to apk
         run: |
           cd android && ./gradlew assembleRelease
