@@ -15,7 +15,7 @@ jobs:
 
       - name: List result
         run: |
-          ls android/app/build/outputs/
+          ls android/app
 
 # - name: uploading artifact
 # uses: actions/upload-artifact@v2
