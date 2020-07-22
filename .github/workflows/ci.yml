@@ -23,12 +23,4 @@ jobs:
 
       - name: List result
         run: |
-          ls android/app
-
-# - name: uploading artifact
-# uses: actions/upload-artifact@v2
-# with:
-# name: release-apk
-# path: android/app/build/outputs/apk/app-release.apk
-
-
+          ls android/app/build/apk
