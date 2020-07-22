@@ -38,7 +38,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: release-app
-          path: android/app/build/outputs/apk
+          path: android/app/build/outputs/apk/app-release.apk
 
       - name: Listing
         run: android/app/build/outputs/apk
