@@ -21,12 +21,14 @@ jobs:
         run: |
           npm install
 
-  build-top-apk:
-    name: Make build to android app
-    runs-on: ubuntu-latest
+      - name: Build to apk
+        run: |
+          cd android && ./gradlew assembleRelease
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Listing
-        run: ls android
+      - name: uploading artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-apk
+          path: android/app/build/outputs/apk/app-release.apk
+
 
