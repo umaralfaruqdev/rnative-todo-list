@@ -16,4 +16,15 @@ jobs:
           git --version
           node -v
           npm -v
+      - name: Installing dependencies
+        run: |
+          npm install
+
+  build-top-apk:
+    name: Make build to android app
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Listing
+        run: ls android
 
