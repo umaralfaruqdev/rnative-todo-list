@@ -42,3 +42,18 @@ jobs:
 
       - name: Listing
         run: ls android/app/build/outputs/apk/release
+
+      - name: Make dist folder
+        run: mkdir dist
+
+      - name: Zipping
+        run: zip -r dist/app-release.zip android/app/build/outputs/apk/release/app-release.apk
+
+      - name: Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/app-release.zip
+          tag: v1
+          overwrite: true
+          body: "The first release app build with React, This App developed by umar"
