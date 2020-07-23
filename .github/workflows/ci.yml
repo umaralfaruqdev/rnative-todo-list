@@ -47,7 +47,7 @@ jobs:
         run: mkdir dist
 
       - name: Zipping
-        run: zip -r dist/app-release.zip android/app/build/outputs/apk/release/app-release.apk
+        run: zip dist/app-release.zip android/app/build/outputs/apk/release/app-release.apk
 
       - name: Release
         uses: svenstaro/upload-release-action@v2
